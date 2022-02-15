@@ -1,0 +1,5 @@
+{
+    "board": "arduino:avr:leonardo",
+    "sketch": "DeviceCode.ino",
+    "port": "COM8"
+}
