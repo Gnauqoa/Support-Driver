@@ -1,0 +1,72 @@
+   with heroky CLI
+
+    git commit -am "make it better"
+    git push heroku master
+
+    setting TLS
+    heroku features:disable spaces-tls-salesforce --app support-driver
+    heroku features:disable spaces-tls-modern --app support-driver
+    heroku features:enable spaces-tls-legacy --app support-driver
+    heroku features:disable spaces-strict-tls --app support-driver
+
+
+    with github
+
+    git add .
+    git commit -m "first commit"
+    git push -u origin main;
+
+    
+connect to postgres:
+    heroku login
+    set PATH=%PATH%;C:\Program Files\PostgreSQL\14\bin
+    heroku pg:psql postgresql-objective-21928 --app support-driver
+
+ALTER TABLE history_table ADD COLUMN event_time TIMESTAMP;
+ALTER TABLE device_table ADD COLUMN longitude VARCHAR(20);
+UPDATE user_table SET birth =  '2003-10-08'WHERE account = 'quanglng2020@gmail.com'
+UPDATE user_table SET birth =  '2021-08-03T17:00:00.000Z'WHERE account = 'quanglng2020@gmail.com'
+
+ALTER TABLE device_table ADD COLUMN address text[] ;
+ALTER TABLE device_table ADD COLUMN isOff boolean;
+ALTER TABLE device_table ADD COLUMN address json[];
+
+ALTER TABLE device_table DROP COLUMN address;
+
+INSERT INTO device_table (tes123t)
+    VALUES ('3');
+   
+   SELECT tes123t FROM device_table WHERE iddevice = '810';
+
+   SELECT tes123t FROM device_table WHERE tes123t ->> 'a' = '1';
+
+
+
+   UPDATE device_table SET address = array_append(address,'{  
+    "xa":"Tân Hội",
+   "huyen":"Mỏ Cày Nam",
+   "tinh":"Bến Tre",
+   "coordinates":"ccccc",
+   "location":"llllll",
+   "time":"" 
+   }'
+   )
+   WHERE iddevice = '810';
+
+   UPDATE device_table SET address ='{   }'
+   WHERE iddevice = '810';
+   SELECT test FROM device_table WHERE iddevice = '810';
+
+   UPDATE device_table SET address ='[
+    { xa: 'Xã Tân Hội', huyen: 'Huyện Mỏ Cày Nam', tinh: 'Tỉnh Bến Tre' },
+    { xa: 'Xã Tà Mung', huyen: 'Huyện Than Uyên', tinh: 'Tỉnh Lai Châu' },
+    { xa: 'Thị trấn Phong Điền', huyen: 'Huyện Phong Điền', tinh: 'Thành phố Cần Thơ'}'
+]
+   WHERE iddevice = '810';
+     
+UPDATE device_table SET idevent =''
+   WHERE iddevice = '810';
+
+   CREATE TABLE id_table  (
+    id_event smallint
+);

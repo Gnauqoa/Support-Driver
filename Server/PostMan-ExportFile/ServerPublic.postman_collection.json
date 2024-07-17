@@ -1,0 +1,576 @@
+{
+	"info": {
+		"_postman_id": "a25b4e4d-4ec8-4414-8fe0-29ca61dc83cf",
+		"name": "ServerPublic",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createAddressDevice",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"password\":\"123456\",\n    \"IDdevice\": \"252\",\n    \"address\":{\n        \"xa\": \"Da Phuoc Hoi\",\n        \"huyen\":\"Mo Cay Nam\",\n        \"tinh\": \"Ben Tre\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://support-driver.herokuapp.com/CAD",
+					"protocol": "https",
+					"host": [
+						"support-driver",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"CAD"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createDevice",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"IDdevice\": \"252\",\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://support-driver.herokuapp.com/createDevice",
+					"protocol": "https",
+					"host": [
+						"support-driver",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"createDevice"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUserInfoAdmin",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://support-driver.herokuapp.com/getUserInfoAdmin",
+					"protocol": "https",
+					"host": [
+						"support-driver",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"getUserInfoAdmin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllUserInfoAdmin",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://support-driver.herokuapp.com/getAllUserInfo",
+					"protocol": "https",
+					"host": [
+						"support-driver",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"getAllUserInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllHistory",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://support-driver.herokuapp.com/getallhistory",
+					"protocol": "https",
+					"host": [
+						"support-driver",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"getallhistory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getallhistoryaction",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"password\": \"123456\",\n    \"action\":\"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://support-driver.herokuapp.com/getallhistoryaction",
+					"protocol": "https",
+					"host": [
+						"support-driver",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"getallhistoryaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllDeviceInfoAdmin",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://support-driver.herokuapp.com/getAllDeviceInfo",
+					"protocol": "https",
+					"host": [
+						"support-driver",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"getAllDeviceInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"account\":\"quang\",\r\n    \"password\":\"quang123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://support-driver.herokuapp.com/log",
+					"protocol": "https",
+					"host": [
+						"support-driver",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"log"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"account\":\"quang\",\r\n    \"password\":\"quang123\",\r\n    \"name\": \"Lê Đăng Quang\",\r\n    \"num_Adr\": 2,\r\n    \"address\":[\r\n        {\r\n            \"xa\": \"Tan Hoi\",\r\n            \"huyen\":\"Mo Cay Nam\",\r\n            \"tinh\": \"Ben Tre\"\r\n        },\r\n        {\r\n            \"xa\": \"Da Phuoc Hoi\",\r\n            \"huyen\":\"Mo Cay Nam\",\r\n            \"tinh\": \"Ben Tre\"\r\n        }\r\n    ] \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://support-driver.herokuapp.com/reg",
+					"protocol": "https",
+					"host": [
+						"support-driver",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"reg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateUserInfo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"account\":\"quang\",\r\n    \"password\":\"quang123\",\r\n    \"name\": \"ledangquang\",\r\n    \"IDdevice\": \"810\",\r\n    \"num_Adr\": 1,\r\n    \"address\":[\r\n        {\r\n            \"xa\": \"\",\r\n            \"huyen\":\"Mo Cay Nam\",\r\n            \"tinh\": \"Ben Tre\"\r\n        }\r\n    ] \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://support-driver.herokuapp.com/update",
+					"protocol": "https",
+					"host": [
+						"support-driver",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteUserInfo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"account\":\"quang\",\r\n    \"password\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://support-driver.herokuapp.com/delete",
+					"protocol": "https",
+					"host": [
+						"support-driver",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUserInfo",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"account\" : \"quang\",\r\n    \"password\": \"quang123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://support-driver.herokuapp.com/getUserInfo",
+					"protocol": "https",
+					"host": [
+						"support-driver",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"getUserInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getWarning",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"account\":\"quang\",\n    \"password\":\"quang123\"\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://support-driver.herokuapp.com/getWarning",
+					"protocol": "https",
+					"host": [
+						"support-driver",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"getWarning"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "acceptWarning",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"account\":\"quang\",\n    \"password\":\"quang123\",\n    \"IDdevice\": \"810\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://support-driver.herokuapp.com/acceptWarning",
+					"protocol": "https",
+					"host": [
+						"support-driver",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"acceptWarning"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeviceSendWaring",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"status\": 0,\n    \"location\": \"not ready\",\n    \"IDdevice\": \"252\",\n    \"id_event\": \"0\",\n    \"devicePass\": \"not ready\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://support-driver.herokuapp.com/warning",
+					"protocol": "https",
+					"host": [
+						"support-driver",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"warning"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Google map",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452&key=AIzaSyAuPYgm5dFCHOkqOY4Bnkq_jrANpOvp2TE",
+					"protocol": "https",
+					"host": [
+						"maps",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"maps",
+						"api",
+						"geocode",
+						"json"
+					],
+					"query": [
+						{
+							"key": "latlng",
+							"value": "40.714224,-73.961452"
+						},
+						{
+							"key": "key",
+							"value": "AIzaSyAuPYgm5dFCHOkqOY4Bnkq_jrANpOvp2TE"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://revgeocode.search.hereapi.com/v1/revgeocode?at=10.773252%2C106.730548&lang=en-US&apikey=acCn1QqrdUXy40jmNnOD2R4O4PxeG5_RRRhKqAwGpPE",
+					"protocol": "https",
+					"host": [
+						"revgeocode",
+						"search",
+						"hereapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"revgeocode"
+					],
+					"query": [
+						{
+							"key": "at",
+							"value": "10.773252%2C106.730548"
+						},
+						{
+							"key": "lang",
+							"value": "en-US"
+						},
+						{
+							"key": "apikey",
+							"value": "acCn1QqrdUXy40jmNnOD2R4O4PxeG5_RRRhKqAwGpPE"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://revgeocode.search.hereapi.com/v1/revgeocode?at=10.259937%2C106.326233&lang=en-US&apikey=acCn1QqrdUXy40jmNnOD2R4O4PxeG5_RRRhKqAwGpPE",
+					"protocol": "https",
+					"host": [
+						"revgeocode",
+						"search",
+						"hereapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"revgeocode"
+					],
+					"query": [
+						{
+							"key": "at",
+							"value": "10.259937%2C106.326233"
+						},
+						{
+							"key": "lang",
+							"value": "en-US"
+						},
+						{
+							"key": "apikey",
+							"value": "acCn1QqrdUXy40jmNnOD2R4O4PxeG5_RRRhKqAwGpPE"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
